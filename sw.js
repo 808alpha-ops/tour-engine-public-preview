@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tour-engine-field-test-v2-playable-audio';
+const CACHE_NAME = 'tour-engine-field-test-v3-partner-evidence';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './tour-engine-icon.svg'];
 
 self.addEventListener('install', event => {
