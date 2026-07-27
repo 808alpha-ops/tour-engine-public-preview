@@ -28,10 +28,12 @@
 
         params.delete('ghPagesRoute');
         const restoredSearch = params.toString();
+        const basePath = '/tour-engine-public-preview/'.replace(/\/$/, '');
+        const restoredPath = `${basePath}${redirectPath.startsWith('/') ? redirectPath : `/${redirectPath}`}`;
         window.history.replaceState(
           null,
           '',
-          `${redirectPath}${restoredSearch ? `?${restoredSearch}` : ''}${window.location.hash}`
+          `${restoredPath}${restoredSearch ? `?${restoredSearch}` : ''}${window.location.hash}`
         );
       })();
     </script>
