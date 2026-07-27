@@ -20,6 +20,21 @@
     <meta name="twitter:description" content="A static field-test preview proving local tour progress, contextual offers, loyalty stamps, and partner evidence before backend spend." />
     <meta name="twitter:image" content="https://808alpha-ops.github.io/tour-engine-public-preview/tour-engine-icon.svg" />
     <title>Tour Engine — Local tours, offers, and loyalty</title>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const redirectPath = params.get('ghPagesRoute');
+        if (!redirectPath) return;
+
+        params.delete('ghPagesRoute');
+        const restoredSearch = params.toString();
+        window.history.replaceState(
+          null,
+          '',
+          `${redirectPath}${restoredSearch ? `?${restoredSearch}` : ''}${window.location.hash}`
+        );
+      })();
+    </script>
     <script type="module" crossorigin src="/tour-engine-public-preview/assets/index-BixGloAP.js"></script>
     <link rel="stylesheet" crossorigin href="/tour-engine-public-preview/assets/index-SeLoZXHu.css">
   </head>
