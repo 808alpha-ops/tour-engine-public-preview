@@ -1,0 +1,18 @@
+{
+  "name": "Tour Engine Field Test",
+  "short_name": "Tour Engine",
+  "description": "PWA field-test preview for local tours, offers, and loyalty.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fdfbf7",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "tour-engine-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
